@@ -1,0 +1,27 @@
+header.top {
+  max-width: 80rem;
+  width: 100%;
+  margin: auto;
+  padding: 2rem 1.25rem;
+
+  & nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    
+    & img {
+      width: 2rem;
+      height: 2rem;
+
+      transition: transform 500ms;
+    }
+
+    & img[src*="logo"]:hover {
+      transform: rotate(90deg);
+    }
+
+    & > a img[src*="bag"]:hover {
+      transform: rotate(-30deg);
+    }
+  }
+}
