@@ -49,3 +49,10 @@ a {
   text-decoration: none;
 }
 
+@media (width <= 22.5rem) {
+  :root {
+    --txt-sm: .75rem;
+    --txt-lg: 1.5rem;
+    --txt-xl: 2rem;
+  }
+}
