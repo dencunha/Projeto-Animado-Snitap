@@ -27,6 +27,7 @@
 html {
   background-color: var(--background);
   font-family: var(--ff);
+  color: var(--txt);
 }
 
 h1, h2 {
