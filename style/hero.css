@@ -5,7 +5,9 @@ section.hero {
   padding: 2.5rem 2rem;
 
   display: flex;
+  gap: 2rem;
   align-items: center;
+  overflow: hidden;
 
   & h1 {
     max-width: 40rem;
@@ -98,6 +100,82 @@ section.hero {
       scale: 1.1;
     }
   }
+
+  & > div:nth-child(2) {
+    display:block;
+    position: relative;
+    max-width: 30.5rem;
+    width: 100%;
+    height: 30.5rem;
+
+
+    & .content {
+      width: 100%;
+      height: 100%;
+
+      position: relative;
+
+      /* transition: slidein 300ms linear ease; */
+ 
+    }
+
+    & img {
+      position: absolute;
+      width: 100%;
+    }
+    
+    & img[src*="lipse"] {
+      width: 94%;
+      top: 3%;
+      left: 3%;
+
+      transform: translateX(200%);
+      animation: slidein 3s ease forwards;
+    }
+
+    & img[src*="patins"] {
+      z-index: 1;
+
+      transform: translateX(200%);
+      animation: slidein 3s ease forwards;
+    }
+
+    & img[src*="stars1"] {
+      width: 5.5rem;
+      top: 8.4rem;
+      left: .5rem;
+
+      opacity: 0;
+
+      transform: translateX(400%);
+      animation: slidein 2s 800ms ease forwards, appear 100ms 800ms forwards;
+    }
+
+    & img[src*="stars2"] {
+      width: 2.5rem;
+      top: 16rem;
+      right: 2px;
+
+      transform: translateX(400%);
+      animation: slidein 2.2s 800ms ease forwards;
+    }
+  }
+}
+
+@keyframes slidein {
+  50% {
+    transform: translateX(-20px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes appear {
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes slideup {
@@ -171,7 +249,11 @@ section.hero {
     max-width: 22.5rem;
     width: 100%;
     margin: auto;
-    padding: 1rem 1.5rem;
+    padding: .75rem 1.5rem;
+
+    display: flex;
+    gap: 2.5rem;
+    flex-direction: column-reverse;
 
     & h1 div {
       height: 2.5rem;
@@ -186,6 +268,24 @@ section.hero {
 
     & .buttons {
       flex-direction: column-reverse;
+    }
+
+    & > div:nth-child(2) {
+      max-width: 19.5rem;
+      width: 100%;
+      height: 19.5rem;
+
+      & img[src*="stars1"] {
+      width: 3.5rem;
+      top: 5.3rem;
+      left: .312rem;
+      }
+
+      & img[src*="stars2"] {
+        width: 1.5rem;
+        top: 10.25rem;
+        right: 1px;
+      }
     }
   }
 
