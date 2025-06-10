@@ -1,0 +1,43 @@
+section.banner {
+  width: 100%;
+  padding-block: 2.5rem;
+  overflow: hidden;
+
+  & .scroller {
+    width: 100%;
+    padding-block: 1rem;
+    overflow: hidden;
+  }
+
+  & .rolling {
+    display: flex;
+    gap: 1.5rem;
+
+    animation: rolling 2s infinite linear;
+  }
+
+  & .bg-gradient {
+    background: linear-gradient(
+      45deg,
+      var(--snitap-sky-light),
+      var(--snitap-joy-light)
+    );
+
+    background-position: 0 50%;
+    background-size: 400%;
+
+    animation: bg-gradient 20s infinite ease;
+  }
+}
+
+@keyframes bg-gradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+@keyframes rolling {
+  to {
+    transform: translateX(-132px);
+  }
+}

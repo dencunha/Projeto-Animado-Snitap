@@ -249,7 +249,7 @@ section.hero {
     max-width: 22.5rem;
     width: 100%;
     margin: auto;
-    padding: .75rem 1.5rem;
+    padding: 1rem 1.5rem 3rem;
 
     display: flex;
     gap: 2.5rem;
