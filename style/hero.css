@@ -130,7 +130,7 @@ section.hero {
       left: 3%;
 
       transform: translateX(200%);
-      animation: slidein 3s ease forwards;
+      animation: slidein 3s 200ms ease forwards;
     }
 
     & img[src*="patins"] {
